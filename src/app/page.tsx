@@ -252,7 +252,7 @@ function HeroSection(props: JoinProps & HeroSectionProps) {
           </div>
         </div>
         <div className="flex justify-center pt-[33px] max-[760px]:pt-[20px] zoom">
-          <Tag value={`Join ${toHundreds(props.total)}+ Collegers`} />
+          <Tag value={`Join ${props.total}+ Collegers`} />
         </div>
         <div className="flex justify-center pt-[33px] max-[760px]:pt-[20px] max-[550px]:pt-[0px] zoom">
           <AvatarSpread images={avatars} total={props.total} />
