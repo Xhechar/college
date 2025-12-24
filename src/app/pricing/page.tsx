@@ -81,62 +81,124 @@ function FirstSection() {
       <div className="max-w-[1440px] mx-auto pt-[100px]">
         <div>
           <div>
-            <h1><span className="relative">Simple <Image src={Acc} alt="acc" className="absolute left-[-40px] top-[-40px]" /> </span> and transparent pricing</h1>
+            <h1>
+              <span className="relative">
+                Simple{" "}
+                <Image
+                  src={Acc}
+                  alt="acc"
+                  className="absolute left-[-40px] top-[-40px]"
+                />{" "}
+              </span>{" "}
+              and transparent pricing
+            </h1>
           </div>
           <div>
-            <p className="body0 pt-[24px]">Zero cost to start. Zero limit to grow. Forever.</p>
+            <p className="body0 pt-[24px]">
+              Zero cost to start. Zero limit to grow. Forever.
+            </p>
           </div>
         </div>
-        <div className={`
-          flex justify-center pt-[150px] gap-[150px]
-          max-[1540px]:gap-[100px]
-          max-[1130px]:gap-[50px]
-          max-[900px]:flex-col max-[900px]:items-center
-        `}>
+        <div
+          className={`
+            flex justify-center pt-[150px] gap-[150px]
+            max-[1540px]:gap-[100px]
+            max-[1130px]:gap-[50px]
+            max-[900px]:flex-col max-[900px]:items-center
+          `}
+        >
           <div className="relative">
-            <Image src={Arrow1} alt="arrow" className={`
-              absolute top-[-80px] right-[60px] z-[-1]
+            <Image
+              src={Arrow1}
+              alt="arrow"
+              className={`
+              absolute top-[-80px] left-[50%] translate-x-[-50%] z-[-1]
               max-[900px]:top-[-150px]
-            `} />
-            <div className={`
+            `}
+            />
+            <div
+              className={`
               w-[662px] rotate-[-0.68deg] relative top-[10%] transition-transform duration-800 hover:translate-y-[-8%]
               max-[1540px]:w-[500px]
               max-[1100px]:w-[400px]
               max-[900px]:w-[100%]
               max-[500px]:rotate-[0deg]
-            `}>
+            `}
+            >
               <PriceCard
-                tagValue="2% fee"
-                header="Paid Community"
+                tagValue="always free"
+                header="Free Community"
                 items={[
-                  "Create 1 paid community",
+                  "Create up to 10 free communities",
                   "All features",
                   "Unlimited courses",
                   "Unlimited members",
+                  "Custom URL",
+                  "Analytics",
                 ]}
               />
             </div>
           </div>
           <div className="relative">
-            <Image src={Arrow2} alt="arrow" className={`
-              absolute top-[-150px] left-[-130px] z-[-1]
-              max-[900px]:top-[-10px]
-            `} />
-            <div className={`
-              w-[662px] rotate-[4deg] relative top-[-12%] transition-transform duration-800 hover:translate-y-[-8%]
-              max-[1540px]:w-[500px]
-              max-[1100px]:w-[400px]
-              max-[900px]:w-[100%]
-              max-[500px]:rotate-[0deg]
-            `}>
+            <Image
+              src={Arrow1}
+              alt="arrow"
+              className={`
+        absolute top-[-80px] left-[50%] translate-x-[-50%] z-[-1]
+        max-[1540px]:top-[-60px]
+        max-[1130px]:top-[-50px] max-[1130px]:w-[80px]
+        max-[900px]:hidden
+      `}
+            />
+            <div
+              className={`
+        w-[662px] rotate-[-0.68deg] relative top-[10%] transition-transform duration-800 hover:translate-y-[-8%]
+        max-[1540px]:w-[500px]
+        max-[1100px]:w-[400px]
+        max-[900px]:w-[90%] max-[900px]:max-w-[500px] max-[900px]:top-0
+        max-[500px]:rotate-[0deg] max-[500px]:w-[95%]
+      `}
+            >
               <PriceCard
-                tagValue="Always Free"
-                header="Free Community"
+                tagValue="3% Fee Per Paying Member"
+                header="Paid Community"
                 items={[
-                  "Create 1 free community",
-                  "All features",
-                  "Unlimited courses",
-                  "Unlimited members",
+                  "Create up to 10 paid communities",
+                  'Everything from "Always Free" plan',
+                  "3% platform fee",
+                  "Payment gateway charges",
+                ]}
+              />
+            </div>
+          </div>
+          <div className="relative">
+            <Image
+              src={Arrow1}
+              alt="arrow"
+              className={`
+        absolute top-[-80px] left-[50%] translate-x-[-50%] z-[-1]
+        max-[1540px]:top-[-60px]
+        max-[1130px]:top-[-50px] max-[1130px]:w-[80px]
+        max-[900px]:hidden
+      `}
+            />
+            <div
+              className={`
+        w-[662px] rotate-[-0.68deg] relative top-[10%] transition-transform duration-800 hover:translate-y-[-8%]
+        max-[1540px]:w-[500px]
+        max-[1100px]:w-[400px]
+        max-[900px]:w-[90%] max-[900px]:max-w-[500px] max-[900px]:top-0
+        max-[500px]:rotate-[0deg] max-[500px]:w-[95%]
+      `}
+            >
+              <PriceCard
+                tagValue="₹3999/month"
+                header="Stop Paying Percentage Fee"
+                items={[
+                  "Create up to 10 paid communities",
+                  'Everything from "Always Free" plan',
+                  "0% platform fee",
+                  "Payment gateway charges",
                 ]}
               />
             </div>
@@ -145,19 +207,35 @@ function FirstSection() {
         <div>
           <div className="relative pt-[182px] pb-[150px]">
             <h2 className="h2 text-center text-secondary-1000 px-4 mx-auto max-w-[1200px]">
-              <span className="relative">2% <Image src={Lightning} alt="lightning" className="absolute left-[-50px] top-[-40px] z-[-1]" /></span> per member who joins a paid community.
+              <span className="relative">
+                2%{" "}
+                <Image
+                  src={Lightning}
+                  alt="lightning"
+                  className="absolute left-[-50px] top-[-40px] z-[-1]"
+                />
+              </span>{" "}
+              per member who joins a paid community.
             </h2>
             <h2 className="h2 text-center text-secondary-1000 px-4 mx-auto max-w-[1400px]">
               We earn, only when you earn. We grow, only
-              <span className="relative">  when you grow. <Image src={Under2} alt="underline" className={`
+              <span className="relative">
+                {" "}
+                when you grow.{" "}
+                <Image
+                  src={Under2}
+                  alt="underline"
+                  className={`
                 absolute w-full right-[0px] bottom-[-16px] z-[-1]
-              `} /> </span>
+              `}
+                />{" "}
+              </span>
             </h2>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function CTASection(props: JoinProps) {
