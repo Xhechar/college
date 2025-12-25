@@ -24,7 +24,7 @@ export function FooterCTA(
         placeholder="Enter your email"
         className={`
           ${value ? `caret-auto` : `caret-transparent`}
-          input w-full px-[22px] text-[18px] font-semibold tracking-[-1px] bg-white transition-shadow duration-500 h-full
+          input w-full px-[22px] text-[18px] py-[21px] font-semibold tracking-[-1px] bg-white transition-shadow duration-500 h-[54px]
           ${props.className}
         `}
         onFocus={() => setIsFocused(true)}

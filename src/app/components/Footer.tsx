@@ -131,7 +131,7 @@ export default function Footer() {
                 text-white body2 text-center
                 max-[760px]:text-left
                 max-[500px]:text-[12px]
-              `}>© 2025 The College. All rights reserved.</p>
+              `}>© 2026 The College. All rights reserved.</p>
             </div>
             {/* <div>
               <span className={`
