@@ -46,7 +46,7 @@ type PriceCardProps = {
   items: Array<string>
 }
 
-export function parseTextWithBold(text: string) {
+function parseTextWithBold(text: string) {
   const parts = text.split("$");
 
   return parts.map((part, index) => {
