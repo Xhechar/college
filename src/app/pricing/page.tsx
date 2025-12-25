@@ -34,10 +34,10 @@ function PriceItem(props: PriceItemProps) {
         <Image src={Tick} alt="tick" />
       </div>
       <div>
-        <p className="body0 text-[#7E8BA1]">{props.value}</p>
+        <p className="body0 text-[#7E8BA1]">{parseTextWithBold(props.value)}</p>
       </div>
     </div>
-  )
+  );
 }
 
 type PriceCardProps = {
@@ -46,13 +46,31 @@ type PriceCardProps = {
   items: Array<string>
 }
 
+export function parseTextWithBold(text: string) {
+  const parts = text.split("$");
+
+  return parts.map((part, index) => {
+    // Odd indices are the text between $ signs (should be bold)
+    if (index % 2 === 1) {
+      return (
+        <strong key={index} className="font-bold text-neutral-800">
+          {part}
+        </strong>
+      );
+    }
+    return <span key={index}>{part}</span>;
+  });
+}
+
 function PriceCard(props: PriceCardProps) {
   return (
     <div className="w-full bg-primary-100 p-[22px] rounded-[22px]">
-      <div className={`
+      <div
+        className={`
         bg-neutral-100 rounded-[22px] p-[32px]
         transition-shadow duration-500 pricing
-      `}>
+      `}
+      >
         <div className="border-b-2 border-dotted border-secondary-600 pb-[15px] flex flex-col items-center">
           <div>
             <TagBig value={props.tagValue} />
@@ -62,17 +80,15 @@ function PriceCard(props: PriceCardProps) {
           </div>
         </div>
         <div className="flex flex-col gap-[30px] pt-[50px] pb-[10px]">
-          {
-            props.items.map((item, index) => (
-              <div key={index}>
-                <PriceItem value={item} />
-              </div>
-            ))
-          }
+          {props.items.map((item, index) => (
+            <div key={index}>
+              <PriceItem value={item} />
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function FirstSection() {
@@ -95,27 +111,20 @@ function FirstSection() {
           </div>
           <div>
             <p className="body0 pt-[24px]">
-              Zero cost to start. Zero limit to grow. Forever.
+              Start free. Pay 3% only while you grow. Switch to ₹3,999/month
+              once you scale - no fees after that.
             </p>
           </div>
         </div>
         <div
           className={`
-            flex justify-center pt-[150px] gap-[150px]
+            flex justify-center pt-[50px] gap-[150px]
             max-[1540px]:gap-[100px]
             max-[1130px]:gap-[50px]
             max-[900px]:flex-col max-[900px]:items-center
           `}
         >
           <div className="relative">
-            <Image
-              src={Arrow1}
-              alt="arrow"
-              className={`
-              absolute top-[-80px] left-[50%] translate-x-[-50%] z-[-1]
-              max-[900px]:top-[-150px]
-            `}
-            />
             <div
               className={`
               w-[662px] rotate-[-0.68deg] relative top-[10%] transition-transform duration-800 hover:translate-y-[-8%]
@@ -129,10 +138,10 @@ function FirstSection() {
                 tagValue="always free"
                 header="Free Community"
                 items={[
-                  "Create up to 10 free communities",
-                  "All features",
-                  "Unlimited courses",
-                  "Unlimited members",
+                  "Create up to $10 free$ communities",
+                  "$All$ features",
+                  "$Unlimited$ courses",
+                  "$Unlimited$ members",
                   "Custom URL",
                   "Analytics",
                 ]}
@@ -140,64 +149,44 @@ function FirstSection() {
             </div>
           </div>
           <div className="relative">
-            <Image
-              src={Arrow1}
-              alt="arrow"
-              className={`
-        absolute top-[-80px] left-[50%] translate-x-[-50%] z-[-1]
-        max-[1540px]:top-[-60px]
-        max-[1130px]:top-[-50px] max-[1130px]:w-[80px]
-        max-[900px]:hidden
-      `}
-            />
             <div
               className={`
-        w-[662px] rotate-[-0.68deg] relative top-[10%] transition-transform duration-800 hover:translate-y-[-8%]
-        max-[1540px]:w-[500px]
-        max-[1100px]:w-[400px]
-        max-[900px]:w-[90%] max-[900px]:max-w-[500px] max-[900px]:top-0
-        max-[500px]:rotate-[0deg] max-[500px]:w-[95%]
-      `}
+              w-[662px] rotate-[-0.68deg] relative top-[10%] transition-transform duration-800 hover:translate-y-[-8%]
+              max-[1540px]:w-[500px]
+              max-[1100px]:w-[400px]
+              max-[900px]:w-[90%] max-[900px]:max-w-[500px] max-[900px]:top-0
+              max-[500px]:rotate-[0deg] max-[500px]:w-[95%]
+            `}
             >
               <PriceCard
                 tagValue="3% Fee Per Paying Member"
                 header="Paid Community"
                 items={[
-                  "Create up to 10 paid communities",
-                  'Everything from "Always Free" plan',
-                  "3% platform fee",
+                  "Create up to $10 paid$ communities",
+                  'Everything from $"Always Free"$ plan',
+                  "$3%$ platform fee",
                   "Payment gateway charges",
                 ]}
               />
             </div>
           </div>
           <div className="relative">
-            <Image
-              src={Arrow1}
-              alt="arrow"
-              className={`
-        absolute top-[-80px] left-[50%] translate-x-[-50%] z-[-1]
-        max-[1540px]:top-[-60px]
-        max-[1130px]:top-[-50px] max-[1130px]:w-[80px]
-        max-[900px]:hidden
-      `}
-            />
             <div
               className={`
-        w-[662px] rotate-[-0.68deg] relative top-[10%] transition-transform duration-800 hover:translate-y-[-8%]
-        max-[1540px]:w-[500px]
-        max-[1100px]:w-[400px]
-        max-[900px]:w-[90%] max-[900px]:max-w-[500px] max-[900px]:top-0
-        max-[500px]:rotate-[0deg] max-[500px]:w-[95%]
-      `}
+                w-[662px] rotate-[-0.68deg] relative top-[10%] transition-transform duration-800 hover:translate-y-[-8%]
+                max-[1540px]:w-[500px]
+                max-[1100px]:w-[400px]
+                max-[900px]:w-[90%] max-[900px]:max-w-[500px] max-[900px]:top-0
+                max-[500px]:rotate-[0deg] max-[500px]:w-[95%]
+              `}
             >
               <PriceCard
                 tagValue="₹3999/month"
-                header="Stop Paying Percentage Fee"
+                header="Scale Unlimited"
                 items={[
-                  "Create up to 10 paid communities",
-                  'Everything from "Always Free" plan',
-                  "0% platform fee",
+                  "Create up to $10 paid$ communities",
+                  'Everything from $"Always Free"$ plan',
+                  "$0%$ platform fee",
                   "Payment gateway charges",
                 ]}
               />
