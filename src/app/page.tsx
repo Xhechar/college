@@ -190,28 +190,41 @@ type HeroSectionProps = {
 
 function HeroSection(props: JoinProps & HeroSectionProps) {
   return (
-    <div className="">
+    <div className="scale-[0.9] origin-top">
       <div className="mx-[16px]">
-        <div className={`
+        <div
+          className={`
           pt-[100px] relative
           max-[1540px]:pt-[50px] max-[1540px]:max-w-[1190px] max-[1540px]:mx-auto
           hero-first zoom
-        `}>
-          <h1 className="text-center relative z-[1]">Creators: Stop juggling Facebook groups, Telegram & WhatsApp <span className="relative">
-            channels
-            <Image src={Circ} alt="circle" className={`
+        `}
+        >
+          <h1 className="text-center relative z-[1]">
+            Creators: Stop juggling Facebook groups, Telegram & WhatsApp{" "}
+            <span className="relative">
+              channels
+              <Image
+                src={Circ}
+                alt="circle"
+                className={`
                 absolute right-[-20px] top-[10px] max-w-[none] w-[110%] z-[-1]
-              `} />
-          </span>
+              `}
+              />
+            </span>
           </h1>
-          <div className={`
+          <div
+            className={`
             absolute right-0 top-[60px]
             max-[1281px]:right-[-50px]
             max-[1205px]:right-[0px]
             max-[1105px]:top-[0px]
             max-[760px]:top-[-20px]
-          `}>
-            <Image src={Conf3} alt="confetti" className={`
+          `}
+          >
+            <Image
+              src={Conf3}
+              alt="confetti"
+              className={`
               max-[1040px]:w-[70%] z-[-1] max-[1040px]:ml-auto
               max-[760px]:w-[40%]
             `}
@@ -220,14 +233,21 @@ function HeroSection(props: JoinProps & HeroSectionProps) {
         </div>
         <div className="relative zoom">
           <p className="body0 text-[26px] leading-[36px] text-center pt-[49px] max-w-[1100px] mx-auto text-sub z-[1] relative max-[550px]:pt-[30px] tracking-[-0.5px]">
-          Host your free or paid communities, courses, conversations and payments all in one place. No ads, no algorithms, no monthly fees. You fully own and control everything.
+            Host your free or paid communities, courses, conversations and
+            payments all in one place. No ads, no algorithms, no monthly fees.
+            You fully own and control everything.
           </p>
-          <div className={`
+          <div
+            className={`
             absolute left-[60px] top-[70px]
             max-[1040px]:left-[30px]
             max-[760px]:top-[0px]
-          `}>
-            <Image src={Conf2} alt="confetti" className={`
+          `}
+          >
+            <Image
+              src={Conf2}
+              alt="confetti"
+              className={`
               max-[1040px]:w-[70%] z-[-2]
               max-[760px]:w-[40%]
             `}
@@ -235,16 +255,23 @@ function HeroSection(props: JoinProps & HeroSectionProps) {
           </div>
         </div>
         <div className="flex justify-center pt-[33px]">
-          <div className={`
+          <div
+            className={`
             flex gap-[10px]
             max-[760px]:flex-col max-[760px]:items-center max-[760px]:grow
-          `}>
-            <div className={`
+          `}
+          >
+            <div
+              className={`
               w-[397px] mx-auto
               max-[1300px]:w-[300px]
               max-[760px]:w-full unzoom
-            `}>
-              <InputCTA className="!h-[52px] input-cta" setHigherValue={props.setEmail} />
+            `}
+            >
+              <InputCTA
+                className="!h-[52px] input-cta"
+                setHigherValue={props.setEmail}
+              />
             </div>
             <div className="max-[760px]:pt-[8px] unzoom">
               <ButtonPrimary value="Join the waitlist" onClick={props.onJoin} />
@@ -258,13 +285,15 @@ function HeroSection(props: JoinProps & HeroSectionProps) {
           <AvatarSpread images={avatars} total={props.total} />
         </div>
       </div>
-      <div className={`
+      <div
+        className={`
         pt-[100px]
         max-[1700px]:max-w-[90%] max-[1700px]:mx-auto
         max-[1500px]:pt-[50px]
         max-[950px]:pt-[20px]
         card-first zoom
-      `}>
+      `}
+      >
         <div className="flex justify-center relative">
           <HeroCard
             image={Hero1}
@@ -289,19 +318,25 @@ function HeroSection(props: JoinProps & HeroSectionProps) {
             sub2="&"
             sub3="Professionals"
           />
-          <div className={`
+          <div
+            className={`
             absolute left-1/2 top-[-140px] translate-x-[-50%] w-full
             max-[1000px]:top-[-50px]
             max-[550px]:top-[-30px]
             max-[350px]:top-[-20px]
-          `}>
+          `}
+          >
             <Image src={Swirl} alt="confetti" />
           </div>
-          <div className={`
+          <div
+            className={`
             absolute bottom-[-100px] w-full left-[-100px]
             max-[1560px]:left-[0px]
-          `}>
-            <Image src={Conf1} alt="confetti"
+          `}
+          >
+            <Image
+              src={Conf1}
+              alt="confetti"
               className={`
               max-[1040px]:w-[10%] z-[-1]
             `}
@@ -310,20 +345,33 @@ function HeroSection(props: JoinProps & HeroSectionProps) {
         </div>
       </div>
       <div>
-        <div className={`
+        <div
+          className={`
           pt-[50px] pb-[78px] relative flex justify-center
           max-[540px]:max-w-[320px] max-[540px]:mx-auto zoom
-        `}>
+        `}
+        >
           <h1 className="text-center inline relative">
-            and for <span className="relative">everyone! <Image src={Ap} alt="hmm" className={`
+            and for{" "}
+            <span className="relative">
+              everyone!{" "}
+              <Image
+                src={Ap}
+                alt="hmm"
+                className={`
               absolute right-[-56px] top-[-32px]
               max-[540px]:w-[20%] max-[540px]:right-[-36px] max-[540px]:top-[-20px]
-            `} /></span>
+            `}
+              />
+            </span>
             {/* <div className="absolute right-[-48px] top-[-40px]">
               <Image src={Ap} alt="hmm" />
             </div> */}
             <div className="absolute left-1/2 bottom-[-24px] translate-x-[-50%] w-full">
-              <Image src={Under1} alt="underline" className={`
+              <Image
+                src={Under1}
+                alt="underline"
+                className={`
                 mx-auto w-full
                 max-[540px]:w-[90%]
               `}
@@ -333,7 +381,7 @@ function HeroSection(props: JoinProps & HeroSectionProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 type ShouldDisplayProps = {
@@ -355,34 +403,50 @@ type TabProps = {
 
 function TabOne(props: TabProps) {
   return (
-    <div className="relative">
+    <div className="relative scale-[0.9] origin-top">
       <ShouldDisplay shouldDisplay={props.shouldDisplay}>
         <div className="flex justify-center w-full">
           <Tag value="About Us" />
         </div>
-        <div className={`
+        <div
+          className={`
           pt-[22px] max-w-[1500px] mx-auto relative px-[32px]
-        `}>
-          <div className={`
+        `}
+        >
+          <div
+            className={`
             absolute left-[-60px] bottom-[-60px]
             max-[1600px]:left-[0px]
-          `}>
-            <Image src={Face} alt="face" className={`
+          `}
+          >
+            <Image
+              src={Face}
+              alt="face"
+              className={`
               z-[-1] relative
               max-[1040px]:w-[95%]
-            `} />
+            `}
+            />
           </div>
           <h2 className="h2 text-center text-secondary-1000 text-[40px]">
-            A platform to create and grow free or paid communities.
-            It lets anyone bring people together,
-            share knowledge, engage, and earn without limits -
+            A platform to create and grow free or paid communities. It lets
+            anyone bring people together, share knowledge, engage, and earn
+            without limits -
             <br />
-            <span className="relative"> all in one place. <Image src={Under2} alt="underline 2" className="absolute left-[0px] bottom-[-12px] z-[-1]" /> </span>
+            <span className="relative">
+              {" "}
+              all in one place.{" "}
+              <Image
+                src={Under2}
+                alt="underline 2"
+                className="absolute left-[0px] bottom-[-12px] z-[-1]"
+              />{" "}
+            </span>
           </h2>
         </div>
       </ShouldDisplay>
     </div>
-  )
+  );
 }
 
 function TabTwo(props: TabProps) {
@@ -523,9 +587,6 @@ function TabSection() {
   const [selectedTab, setSelectedTab] = useState(0);
   const divRef = useRef<HTMLDivElement | null>(null)
 
-  /* useEffect(() => {
-
-  }) */
 
   function handleButtonSelect(tab: number) {
     setSelectedTab(tab);

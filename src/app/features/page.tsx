@@ -30,7 +30,7 @@ import { postEmail } from "../lib/api"
 
 function FirstSection(props: JoinProps) {
   return (
-    <div>
+    <div className="scale-[0.9] origin-top">
       <div className="mx-[16px]">
         <div className="pt-[100px] relative">
           <h1 className="text-center">
@@ -39,50 +39,78 @@ function FirstSection(props: JoinProps) {
               max-[760px]:top-[-12px]
               max-[336px]:top-[20px] max-[336px]:left-[-20px] max-[336px]:w-[150%]
             `} /></span> ten different tools</h1> */}
-            <span className="relative">One Platform.<Image src={FCircle} alt="circle" className={`
+            <span className="relative">
+              One Platform.
+              <Image
+                src={FCircle}
+                alt="circle"
+                className={`
               absolute left-[-10px] top-[-26px] max-w-[none] w-[110%] z-[-1]
               max-[760px]:top-[-12px]
               max-[336px]:top-[20px] max-[336px]:left-[-20px] max-[336px]:w-[150%]
-            `} /></span> Zero chaos.</h1>
-          <div className={
-            `absolute right-[180px] top-[60px] z-[-1]
+            `}
+              />
+            </span>{" "}
+            Zero chaos.
+          </h1>
+          <div
+            className={`absolute right-[180px] top-[60px] z-[-1]
             max-[1040px]:right-[0px]
             max-[396px]:top-[30px]
-          `}>
-            <Image src={Conf3} alt="confetti" className={`
+          `}
+          >
+            <Image
+              src={Conf3}
+              alt="confetti"
+              className={`
               max-[1040px]:w-[90%]
-            `} />
+            `}
+            />
           </div>
         </div>
         <div className="relative">
           <p className="font-bold text-[24px] leading-[28px] text-center pt-[28px] max-w-[950px] mx-auto text-sub max-[800px]:text-[16px] max-[800px]:leading-[20px]">
             {/* Everything you need - now in one place, with one login */}
-            Manage your community, courses, engagement and payments like never before
+            Manage your community, courses, engagement and payments like never
+            before
           </p>
-          <div className={`
+          <div
+            className={`
             absolute left-[60px] top-[0px] z-[-1]
             max-[1040px]:left-[10px]
             max-[396px]:top-[-20px] max-[396px]:left-[0px]
-          `}>
-            <Image src={Conf4} alt="confetti" className={`
+          `}
+          >
+            <Image
+              src={Conf4}
+              alt="confetti"
+              className={`
               max-[1040px]:w-[90%]
-            `} />
+            `}
+            />
           </div>
         </div>
         <div className="flex justify-center pt-[50px] max-[800px]:pt-[29px]">
           <TagBig value="Be the first to experience it" />
         </div>
         <div className="flex justify-center pt-[33px]">
-          <div className={`
+          <div
+            className={`
             flex gap-[10px]
             max-[760px]:flex-col max-[760px]:items-center max-[760px]:grow
-          `}>
-            <div className={`
+          `}
+          >
+            <div
+              className={`
               w-[397px] mx-auto
               max-[1300px]:w-[300px]
               max-[760px]:w-full unzoom
-            `}>
-              <InputCTA className="!h-[52px] input-cta" setHigherValue={props.setEmail} />
+            `}
+            >
+              <InputCTA
+                className="!h-[52px] input-cta"
+                setHigherValue={props.setEmail}
+              />
             </div>
             <div className="max-[760px]:pt-[8px] unzoom">
               <ButtonPrimary value="Join the waitlist" onClick={props.onJoin} />
@@ -91,7 +119,7 @@ function FirstSection(props: JoinProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 type FeatureCardProps = {
