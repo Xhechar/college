@@ -34,8 +34,8 @@ type PriceCardProps = {
 };
 
 function parseTextWithBold(text: string) {
-  const parts = text.split('$');
-  
+  const parts = text.split("$");
+
   return parts.map((part, index) => {
     // Odd indices are the text between $ signs (should be bold)
     if (index % 2 === 1) {
@@ -53,11 +53,7 @@ function PriceItem(props: PriceItemProps) {
   return (
     <div className="flex items-start gap-[14px]">
       <div className="flex-shrink-0 mt-[4px]">
-        <Image 
-          src={Tick} 
-          alt="tick" 
-          className="w-[32px] h-[32px]"
-        />
+        <Image src={Tick} alt="tick" className="w-[32px] h-[32px]" />
       </div>
       <div className="flex-1">
         <p className="body0 text-[#7E8BA1] text-[22px] leading-[1.6] max-[900px]:text-[18px] max-[500px]:text-[17px]">
@@ -70,11 +66,11 @@ function PriceItem(props: PriceItemProps) {
 
 function PriceCard(props: PriceCardProps) {
   return (
-    <div className="w-full bg-primary-100 p-[20px] rounded-[22px]">
+    <div className="w-full bg-primary-100 p-[20px] rounded-[22px] h-full">
       <div
         className={`
           bg-neutral-100 rounded-[22px] p-[32px]
-          transition-shadow duration-500 pricing
+          transition-shadow duration-500 pricing h-full flex flex-col
           max-[900px]:p-[28px]
         `}
       >
@@ -83,10 +79,12 @@ function PriceCard(props: PriceCardProps) {
             <TagBig value={props.tagValue} />
           </div>
           <div className="pt-[16px]">
-            <h3 className="h3 text-[32px] max-[900px]:text-[26px] max-[500px]:text-[24px]">{props.header}</h3>
+            <h3 className="h3 text-[32px] max-[900px]:text-[26px] max-[500px]:text-[24px]">
+              {props.header}
+            </h3>
           </div>
         </div>
-        <div className="flex flex-col gap-[26px] pt-[42px] pb-[10px] max-[900px]:gap-[24px] max-[900px]:pt-[38px]">
+        <div className="flex flex-col gap-[26px] pt-[42px] pb-[10px] max-[900px]:gap-[24px] max-[900px]:pt-[38px] flex-1">
           {props.items.map((item, index) => (
             <div key={index}>
               <PriceItem value={item} />
@@ -102,7 +100,7 @@ function FirstSection() {
   return (
     <div>
       <div className="max-w-[1440px] mx-auto pt-[80px] px-[32px] max-[900px]:px-[24px] max-[500px]:px-[16px]">
-        <div className="max-w-[900px]">
+        <div className="max-w-[1100px]">
           <div>
             <h1 className="text-[54px] leading-[1.2] max-[1200px]:text-[44px] max-[900px]:text-[36px] max-[500px]:text-[30px]">
               <span className="relative inline-block">
@@ -117,7 +115,7 @@ function FirstSection() {
             </h1>
           </div>
           <div>
-            <p className="body0 pt-[20px] text-[20px] max-[900px]:text-[17px] max-[500px]:text-[15px]">
+            <p className="body0 pt-[20px] text-[20px] max-[900px]:text-[17px] max-[600px]:text-[15px]">
               Start free. Pay 3% only while you grow. Switch to ₹3,999/month
               once you scale - no fees after that.
             </p>
@@ -131,18 +129,18 @@ function FirstSection() {
             max-[900px]:flex-col max-[900px]:items-center max-[900px]:gap-[60px] max-[900px]:pt-[50px]
           `}
         >
-          <div className="relative w-full max-w-[440px] max-[1100px]:max-w-[380px] max-[900px]:max-w-[520px]">
+          <div className="relative w-full max-w-[500px] max-[1100px]:max-w-[420px] max-[900px]:max-w-[520px]">
             <div
               className={`
-                w-full rotate-[-0.68deg] transition-transform duration-800 hover:translate-y-[-8%]
+                w-full transition-transform duration-800 hover:translate-y-[-8%] h-full
                 max-[900px]:rotate-[0deg]
               `}
             >
               <PriceCard
-                tagValue="always free"
+                tagValue="Always Free"
                 header="Free Community"
                 items={[
-                  "Create up to $10 free$ communities",
+                  "Create up to $5 free$ communities",
                   "$All$ features",
                   "$Unlimited$ courses",
                   "$Unlimited$ members",
@@ -152,10 +150,10 @@ function FirstSection() {
               />
             </div>
           </div>
-          <div className="relative w-full max-w-[440px] max-[1100px]:max-w-[380px] max-[900px]:max-w-[520px]">
+          <div className="relative w-full max-w-[500px] max-[1100px]:max-w-[420px] max-[900px]:max-w-[520px]">
             <div
               className={`
-                w-full rotate-[-0.68deg] transition-transform duration-800 hover:translate-y-[-8%]
+                w-full transition-transform duration-800 hover:translate-y-[-8%] h-full
                 max-[900px]:rotate-[0deg]
               `}
             >
@@ -171,10 +169,10 @@ function FirstSection() {
               />
             </div>
           </div>
-          <div className="relative w-full max-w-[440px] max-[1100px]:max-w-[380px] max-[900px]:max-w-[520px]">
+          <div className="relative w-full max-w-[500px] max-[1100px]:max-w-[420px] max-[900px]:max-w-[520px]">
             <div
               className={`
-                w-full rotate-[-0.68deg] transition-transform duration-800 hover:translate-y-[-8%]
+                w-full transition-transform duration-800 hover:translate-y-[-8%] h-full
                 max-[900px]:rotate-[0deg]
               `}
             >
@@ -194,9 +192,10 @@ function FirstSection() {
         <div>
           <div className="relative pt-[130px] pb-[120px] max-[900px]:pt-[90px] max-[900px]:pb-[80px] max-[500px]:pt-[70px] max-[500px]:pb-[60px]">
             <h2 className="h2 text-center text-secondary-1000 px-4 mx-auto max-w-[1100px] text-[42px] leading-[1.4] max-[1200px]:text-[38px] max-[900px]:text-[30px] max-[500px]:text-[24px]">
-              We earn, only when you earn. We grow, only 
+              We earn, only when you earn. We grow, only
               <span className="relative inline-block px-[8px]">
-                {" "} when you grow.{" "}
+                {" "}
+                when you grow.{" "}
                 <Image
                   src={Under2}
                   alt="underline"
@@ -214,129 +213,6 @@ function FirstSection() {
     </div>
   );
 }
-
-// function FirstSection() {
-//   return (
-//     <div>
-//       <div className="max-w-[1440px] mx-auto pt-[80px] px-[32px] max-[900px]:px-[24px] max-[500px]:px-[16px]">
-//         <div>
-//           <div>
-//             <h1 className="text-[52px] leading-[1.4] max-[1200px]:text-[44px] max-[900px]:text-[36px] max-[500px]:text-[30px]">
-//               <span className="relative inline-block">
-//                 Simple{" "}
-//                 <Image
-//                   src={Acc}
-//                   alt="acc"
-//                   className="absolute left-[-35px] top-[-35px] w-[70px] max-[900px]:w-[55px] max-[900px]:left-[-25px] max-[900px]:top-[-25px] max-[500px]:w-[45px] max-[500px]:left-[-20px] max-[500px]:top-[-20px]"
-//                 />{" "}
-//               </span>{" "}
-//               and transparent pricing
-//             </h1>
-//           </div>
-//           <div>
-//             <p className="body0 pt-[20px] text-[19px] max-[900px]:text-[17px] max-[500px]:text-[15px]">
-//               Start free. Pay 3% only while you grow. Switch to ₹3,999/month
-//               once you scale - no fees after that.
-//             </p>
-//           </div>
-//         </div>
-//         <div
-//           className={`
-//             flex justify-center pt-[70px] gap-[80px]
-//             max-[1400px]:gap-[50px]
-//             max-[1100px]:gap-[35px]
-//             max-[900px]:flex-col max-[900px]:items-center max-[900px]:gap-[60px] max-[900px]:pt-[50px]
-//           `}
-//         >
-//           <div className="relative w-full max-w-[440px] max-[1100px]:max-w-[380px] max-[900px]:max-w-[520px]">
-//             <div
-//               className={`
-//                 w-full rotate-[-0.68deg] transition-transform duration-800 hover:translate-y-[-8%]
-//                 max-[900px]:rotate-[0deg]
-//               `}
-//             >
-//               <PriceCard
-//                 tagValue="always free"
-//                 header="Free Community"
-//                 items={[
-//                   "Create up to $10 free$ communities",
-//                   "$All$ features",
-//                   "$Unlimited$ courses",
-//                   "$Unlimited$ members",
-//                   "Custom URL",
-//                   "Analytics",
-//                 ]}
-//               />
-//             </div>
-//           </div>
-//           <div className="relative w-full max-w-[440px] max-[1100px]:max-w-[380px] max-[900px]:max-w-[520px]">
-//             <div
-//               className={`
-//                 w-full rotate-[-0.68deg] transition-transform duration-800 hover:translate-y-[-8%]
-//                 max-[900px]:rotate-[0deg]
-//               `}
-//             >
-//               <PriceCard
-//                 tagValue="3% Fee Per Paying Member"
-//                 header="Paid Community"
-//                 items={[
-//                   "Create up to $10 paid$ communities",
-//                   'Everything from $"Always Free"$ plan',
-//                   "$3%$ platform fee",
-//                   "Payment gateway charges",
-//                 ]}
-//               />
-//             </div>
-//           </div>
-//           <div className="relative w-full max-w-[440px] max-[1100px]:max-w-[380px] max-[900px]:max-w-[520px]">
-//             <div
-//               className={`
-//                 w-full rotate-[-0.68deg] transition-transform duration-800 hover:translate-y-[-8%]
-//                 max-[900px]:rotate-[0deg]
-//               `}
-//             >
-//               <PriceCard
-//                 tagValue="₹3999/month"
-//                 header="Scale Unlimited"
-//                 items={[
-//                   "Create up to $10 paid$ communities",
-//                   'Everything from $"Always Free"$ plan',
-//                   "$0%$ platform fee",
-//                   "Payment gateway charges",
-//                 ]}
-//               />
-//             </div>
-//           </div>
-//         </div>
-//         <div>
-//           <div className="relative pt-[130px] pb-[120px] max-[900px]:pt-[90px] max-[900px]:pb-[80px] max-[500px]:pt-[70px] max-[500px]:pb-[60px]">
-//             <h2 className="h2 text-center text-secondary-1000 px-4 mx-auto max-w-[1100px] text-[44px] leading-[1.4] max-[1200px]:text-[38px] max-[900px]:text-[30px] max-[500px]:text-[24px]">
-//               We earn, only when you earn. We grow, only
-//               <span className="relative inline-block">
-//                 {" "}
-//                 when you grow.{" "}
-//                 <Image
-//                   src={Lightning}
-//                   alt="lightning"
-//                   className="absolute left-[-45px] top-[-35px] z-[-1] w-[90px] max-[900px]:w-[70px] max-[900px]:left-[-35px] max-[900px]:top-[-25px] max-[500px]:w-[55px] max-[500px]:left-[-25px] max-[500px]:top-[-18px]"
-//                 />
-//                 <Image
-//                   src={Under2}
-//                   alt="underline"
-//                   className={`
-//                     absolute w-full right-[0px] bottom-[-14px] z-[-1]
-//                     max-[900px]:bottom-[-10px]
-//                     max-[500px]:bottom-[-8px]
-//                   `}
-//                 />{" "}
-//               </span>
-//             </h2>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 
 function CTASection(props: JoinProps) {
   return (

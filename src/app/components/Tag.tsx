@@ -17,7 +17,7 @@ type TagBigProps = {
 export function TagBig(props: TagBigProps) {
   return (
     <div>
-      <span className="bg-mint-600 inline-block h5 text-[20px] px-[12px] py-[8px] rounded-[24px] text-center font-medium">
+      <span className="bg-mint-600 inline-block h5 text-[18px] px-[12px] py-[8px] rounded-[24px] text-center font-medium">
         — {props.value} —
       </span>
     </div>
