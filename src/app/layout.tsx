@@ -104,11 +104,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: title,
     description: desc,
-    url: "https://the-college.netlify.app",
+    url: "https://thecollege.co.in",
     siteName: "The College",
     images: [
       {
-        url: "https://the-college.netlify.app/thecollege2.png?v=5",
+        url: "https://thecollege.co.in/thecollege2.png?v=5",
         alt: "The College",
         width: 1280,
         height: 720,
@@ -121,7 +121,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: title,
     description: desc,
-    images: ["https://the-college.netlify.app/thecollege2.png"],
+    images: ["https://thecollege.co.in/thecollege2.png"],
   },
 };
 
