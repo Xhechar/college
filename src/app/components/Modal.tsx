@@ -111,7 +111,7 @@ export default function Modal(props: ModalProps) {
               max-[400px]:text-[20px]
             `}>
               First 100 get '<span className="text-primary">Founding Creator</span>' badge <span className="text-primary">+</span> 0% fees for 1 year <span className="text-primary">+</span> early access.
-              No ads. No monthly fees. No hidden charges. No algorithmic games.<br /> We earn 2% only, when you earn.
+              No ads. No monthly fees. No hidden charges. No algorithmic games.<br /> We earn 3% only, when you earn.
               <Image
                 src={Smile}
                 alt="smile"

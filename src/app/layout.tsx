@@ -34,7 +34,7 @@ const interSans = Inter({
 });
 
 const title = "The College - All-in-one community platform for Bharat."
-const desc = "Stop juggling WhatsApp, Telegram, LMS, and payment apps. With TheCollege, creators launch communities, teach, and monetize - all in one tab."
+const desc = "Modern community infrastructure for India and the world."
 
 export const metadata: Metadata = {
   title: "The College",
@@ -104,11 +104,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: title,
     description: desc,
-    url: "https://thecollege.netlify.app",
+    url: "https://the-college.netlify.app",
     siteName: "The College",
     images: [
       {
-        url: "https://thecollege.netlify.app/thecollege2.png?v=5",
+        url: "https://the-college.netlify.app/thecollege2.png?v=5",
         alt: "The College",
         width: 1280,
         height: 720,
@@ -121,7 +121,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: title,
     description: desc,
-    images: ["https://thecollege.netlify.app/thecollege2.png"],
+    images: ["https://the-college.netlify.app/thecollege2.png"],
   },
 };
 
