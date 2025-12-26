@@ -14,7 +14,7 @@ export function FooterCTA(
   const [value, setValue] = useState("");
 
   return (
-    <div className="relative w-full scale-[0.9] origin-top">
+    <div className="relative w-full">
       {!value && (
         <span className="absolute text-[#D00416] top-[50%] translate-y-[-65%] left-[150px] input-cta-star">
           *
@@ -24,7 +24,7 @@ export function FooterCTA(
         placeholder="Enter your email"
         className={`
           ${value ? `caret-auto` : `caret-transparent`}
-          input w-full px-[22px] text-[18px] py-[21px] font-semibold tracking-[-1px] bg-white transition-shadow duration-500 h-[54px]
+          input w-full px-[22px] text-[18px] py-[19px] font-semibold tracking-[-1px] bg-white transition-shadow duration-500 h-[54px]
           ${props.className}
         `}
         onFocus={() => setIsFocused(true)}

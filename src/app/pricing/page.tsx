@@ -177,7 +177,7 @@ function FirstSection() {
               `}
             >
               <PriceCard
-                tagValue="₹3999/month"
+                tagValue="₹3,999/month"
                 header="Scale Unlimited"
                 items={[
                   "Create up to $10 paid$ communities",

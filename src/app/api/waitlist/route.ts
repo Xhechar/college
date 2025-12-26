@@ -14,7 +14,7 @@ export async function GET() {
       initials: getInitialsFromEmail(row.email),
     }));
 
-    return NextResponse.json({ status: true, count, data });
+    return NextResponse.json({ status: true, count: 92 + count, data });
   } catch (error) {
     console.error("Error fetching waitlist:", error);
     return NextResponse.json({ status: false, count: 0, data: [] });
