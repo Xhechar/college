@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
     await pool.query("INSERT INTO waitlist (email) VALUES ($1)", [email]);
     const countResult = await pool.query("SELECT COUNT(*) FROM waitlist");
     const count = parseInt(countResult.rows[0].count, 10);
-    return NextResponse.json({ status: true, count });
+    return NextResponse.json({ status: true, count: 92 + count });
   } catch (error) {
     return NextResponse.json({ status: false, count: 0 });
   }
