@@ -21,7 +21,9 @@ import Arrow2 from "@/app/assets/arrowb2.png";
 import { JoinProps } from "../page";
 import Modal from "../components/Modal";
 import { useState } from "react";
-import { postEmail } from "../lib/api"
+import { postEmail } from "../lib/api";
+
+import { AreaTag, parseTextWithBold } from "../utils/text.parser"
 
 type PriceItemProps = {
   value: string
@@ -33,22 +35,6 @@ type PriceCardProps = {
   items: Array<string>;
 };
 
-function parseTextWithBold(text: string) {
-  const parts = text.split("$");
-
-  return parts.map((part, index) => {
-    // Odd indices are the text between $ signs (should be bold)
-    if (index % 2 === 1) {
-      return (
-        <strong key={index} className="font-semibold text-neutral-900">
-          {part}
-        </strong>
-      );
-    }
-    return <span key={index}>{part}</span>;
-  });
-}
-
 function PriceItem(props: PriceItemProps) {
   return (
     <div className="flex items-start gap-[14px]">
@@ -57,7 +43,7 @@ function PriceItem(props: PriceItemProps) {
       </div>
       <div className="flex-1">
         <p className="body0 text-[#7E8BA1] text-[22px] leading-[1.6] max-[900px]:text-[18px] max-[500px]:text-[17px]">
-          {parseTextWithBold(props.value)}
+          {parseTextWithBold(props.value, AreaTag.CardList)}
         </p>
       </div>
     </div>
@@ -116,8 +102,15 @@ function FirstSection() {
           </div>
           <div>
             <p className="body0 pt-[20px] text-[20px] max-[900px]:text-[17px] max-[600px]:text-[15px]">
-              Start free. Pay 3% only while you grow. Switch to ₹3,999/month
-              once you scale - no fees after that.
+              Start free. Pay{" "}
+              <strong className="font-bold text-neutral-1000">
+                2%
+              </strong>{" "}
+              only while you grow. Switch to{" "}
+              <strong className="font-bold text-neutral-1000">
+                ₹2,999
+              </strong>
+              /month once you scale - no fees after that.
             </p>
           </div>
         </div>
@@ -158,13 +151,13 @@ function FirstSection() {
               `}
             >
               <PriceCard
-                tagValue="3% Fee Per Paying Member"
+                tagValue="$2% Fee Per Paying Member$"
                 header="Paid Community"
                 items={[
                   "Create up to $10 paid$ communities",
                   'Everything from $"Always Free"$ plan',
-                  "$3%$ platform fee",
-                  "Payment gateway charges",
+                  "$2%$ platform fee",
+                  "Fee capped at $₹4,000/month$",
                 ]}
               />
             </div>
@@ -177,13 +170,12 @@ function FirstSection() {
               `}
             >
               <PriceCard
-                tagValue="₹3,999/month"
+                tagValue="$₹2,999$/month"
                 header="Scale Unlimited"
                 items={[
                   "Create up to $10 paid$ communities",
                   'Everything from $"Always Free"$ plan',
                   "$0%$ platform fee",
-                  "Payment gateway charges",
                 ]}
               />
             </div>
