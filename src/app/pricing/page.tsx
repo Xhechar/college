@@ -102,85 +102,64 @@ function FirstSection() {
           </div>
           <div>
             <p className="body0 pt-[20px] text-[20px] max-[900px]:text-[17px] max-[600px]:text-[15px]">
-              Start free. Pay{" "}
-              <strong className="font-bold text-neutral-1000">
-                2%
-              </strong>{" "}
-              only while you grow. Switch to{" "}
-              <strong className="font-bold text-neutral-1000">
-                ₹2,999
-              </strong>
-              /month once you scale - no fees after that.
+              Zero cost to start. Zero limit to grow. Forever!
             </p>
           </div>
         </div>
         <div
-          className={`
-            flex justify-center pt-[70px] gap-[80px]
-            max-[1400px]:gap-[50px]
-            max-[1100px]:gap-[35px]
-            max-[900px]:flex-col max-[900px]:items-center max-[900px]:gap-[60px] max-[900px]:pt-[50px]
-          `}
-        >
-          <div className="relative w-full max-w-[500px] max-[1100px]:max-w-[420px] max-[900px]:max-w-[520px]">
-            <div
-              className={`
-                w-full transition-transform duration-800 hover:translate-y-[-8%] h-full
-                max-[900px]:rotate-[0deg]
-              `}
-            >
-              <PriceCard
-                tagValue="Always Free"
-                header="Free Community"
-                items={[
-                  "Create up to $5 free$ communities",
-                  "$All$ features",
-                  "$Unlimited$ courses",
-                  "$Unlimited$ members",
-                  "Custom URL",
-                  "Analytics",
-                ]}
-              />
-            </div>
-          </div>
-          <div className="relative w-full max-w-[500px] max-[1100px]:max-w-[420px] max-[900px]:max-w-[520px]">
-            <div
-              className={`
-                w-full transition-transform duration-800 hover:translate-y-[-8%] h-full
-                max-[900px]:rotate-[0deg]
-              `}
-            >
-              <PriceCard
-                tagValue="$2% Fee Per Paying Member$"
-                header="Paid Community"
-                items={[
-                  "Create up to $10 paid$ communities",
-                  'Everything from $"Always Free"$ plan',
-                  "$2%$ platform fee",
-                  "Fee capped at $₹4,000/month$",
-                ]}
-              />
-            </div>
-          </div>
-          <div className="relative w-full max-w-[500px] max-[1100px]:max-w-[420px] max-[900px]:max-w-[520px]">
-            <div
-              className={`
-                w-full transition-transform duration-800 hover:translate-y-[-8%] h-full
-                max-[900px]:rotate-[0deg]
-              `}
-            >
-              <PriceCard
-                tagValue="$₹2,999$/month"
-                header="Scale Unlimited"
-                items={[
-                  "Create up to $10 paid$ communities",
-                  'Everything from $"Always Free"$ plan',
-                  "$0%$ platform fee",
-                ]}
-              />
-            </div>
-          </div>
-        </div>
+  className={`
+    flex justify-center pt-[70px] gap-[120px]
+    max-[1400px]:gap-[90px]
+    max-[1200px]:gap-[60px]
+    max-[1100px]:gap-[45px]
+    max-[900px]:flex-col max-[900px]:items-center max-[900px]:gap-[60px] max-[900px]:pt-[50px]
+  `}
+>
+  <div className="relative w-full max-w-[500px] max-[1100px]:max-w-[420px] max-[900px]:max-w-[520px]">
+    <div
+      className={`
+        w-full transition-transform duration-800 hover:translate-y-[-8%] h-full
+        max-[900px]:rotate-[0deg]
+      `}
+    >
+      <PriceCard
+        tagValue="Members can join and access for free"
+        header="Free Community"
+        items={[
+          "Create up to $5 free$ communities",
+          "$No Ads$",
+          "$All$ Features",
+          "$Unlimited$ courses",
+          "$Unlimited$ members",
+          "$1$ Admin",
+          "Custom URL",
+          "Analytics",
+        ]}
+      />
+    </div>
+  </div>
+  <div className="relative w-full max-w-[500px] max-[1100px]:max-w-[420px] max-[900px]:max-w-[520px]">
+    <div
+      className={`
+        w-full transition-transform duration-800 hover:translate-y-[-8%] h-full
+        max-[900px]:rotate-[0deg]
+      `}
+    >
+      <PriceCard
+        tagValue="Members pay to join. You earn monthly"
+        header="Earning Community"
+        items={[
+          'Everything from $"Free Community"$',
+          "Create up to $10 earning$ communities",
+          "Offer monthly/yearly/one-time $subscriptions$",
+          "$5$ Admins",
+          "$2%$ platform fee",
+          "$Fee capped at ₹3,000/month$",
+        ]}
+      />
+    </div>
+  </div>
+</div>
         <div>
           <div className="relative pt-[130px] pb-[120px] max-[900px]:pt-[90px] max-[900px]:pb-[80px] max-[500px]:pt-[70px] max-[500px]:pb-[60px]">
             <h2 className="h2 text-center text-secondary-1000 px-4 mx-auto max-w-[1100px] text-[42px] leading-[1.4] max-[1200px]:text-[38px] max-[900px]:text-[30px] max-[500px]:text-[24px]">
